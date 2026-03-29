@@ -696,7 +696,49 @@
           <div class="contact-form-card">
             <h3>Book an Appointment</h3>
             <p class="sub">Fill in your details and we'll get back to you within 12 hours.</p>
-            <form id="appointmentForm">
+           <form name="appointment" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="appointment" />
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Full Name *</label>
+      <input type="text" name="name" placeholder="Your full name" required />
+    </div>
+    <div class="form-group">
+      <label>Phone Number *</label>
+      <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" name="email" placeholder="your@email.com" />
+    </div>
+    <div class="form-group">
+      <label>Service Required</label>
+      <select name="service">
+        <option>Back Pain Treatment</option>
+        <option>Neck Pain Treatment</option>
+        <option>Sports Injury Rehabilitation</option>
+        <option>Post Surgery Physiotherapy</option>
+        <option>Dry Needling Therapy</option>
+        <option>Cupping Therapy</option>
+        <option>Electrotherapy</option>
+        <option>Home Visit Physiotherapy</option>
+        <option>Other</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Message</label>
+    <textarea name="message"></textarea>
+  </div>
+
+  <button type="submit" class="btn-submit">Request Appointment</button>
+</form>
+            <!-- <form id="appointmentForm">
               <div class="form-row">
                 <div class="form-group">
                   <label for="patientName">Full Name *</label>
@@ -733,7 +775,7 @@
                 <textarea id="message" placeholder="Briefly describe your pain or condition, how long you've had it, and any previous treatments..."></textarea>
               </div>
               <button type="submit" class="btn-submit">Request Appointment</button>
-            </form>
+            </form> -->
           </div>
         </div>
       </div>
